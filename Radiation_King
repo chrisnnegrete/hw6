@@ -1,0 +1,18 @@
+function setup() {
+  createCanvas(600, 300);
+  img = loadImage('Fallout_Int_Background.jpg');
+  
+}
+
+function draw() {
+  background(220);
+   image(img, 0, 0, 600, 300);
+  fill(220);
+  rect(400, 0, 
+        
+  function preload() {
+    soundFormats("mp3");
+    mySound = loadSound("");
+  }
+       if mouseIsPressed("soundPlay");
+}
