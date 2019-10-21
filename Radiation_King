@@ -1,18 +1,62 @@
+// Sound Variables, in order of appearance
+var ambience;
+var static;
+var channel1;
+var channel2;
+var siren;
+var explosion;
+
+// "Please Stand By"
+var standby;
+
 function setup() {
   createCanvas(600, 300);
   img = loadImage('Fallout_Int_Background.jpg');
-  
+
+  // Contains all sounds in file
+  function preload() {
+    soundFormats("mp3");
+    ambience = loadSound("ambience.mp3");
+    static = loadSound("static.mp3");
+    channel1 = loadSound("channel1.mp3");
+    channel2 = loadSound("channel2.mp3");
+    siren = loadSound("siren.mp3");
+    explosion = loadSound("explosion.mp3");
+
+  }
 }
 
 function draw() {
-  background(220);
-   image(img, 0, 0, 600, 300);
-  fill(220);
-  rect(400, 0, 
-        
-  function preload() {
-    soundFormats("mp3");
-    mySound = loadSound("");
-  }
-       if mouseIsPressed("soundPlay");
+
+  // Background Image
+  //background(220);
+  image(img, 0, 0, 600, 300);
+
+  // Left Window
+  noStroke();
+  fill(255);
+  rect(0, 0, 110, 100)
+
+  // Right Window
+  noStroke();
+  fill(255);
+  rect(395, 0, 52, 40);
+
+  // Television Screen
+  stroke(255);
+  strokeWeight(1);
+  fill(0);
+  rect(311, 31, 92, 70, 20);
+
+  // Top Button
+  stroke(0);
+  fill(255, 0, 0);
+  ellipse(312, 141, 10);
+
+  // Bottom Button
+  stroke(0);
+  fill(0, 255, 0);
+  ellipse(312, 155, 10);
+
+
 }
